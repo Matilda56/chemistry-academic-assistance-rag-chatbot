@@ -1,0 +1,10 @@
+// /workspace/rag-bot/ui/next.config.ts
+
+import type { NextConfig } from 'next';
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const nextConfig: NextConfig = {
+  basePath: prefix || undefined,      // 开发模式必须用它
+  assetPrefix: prefix || undefined,
+  images: { unoptimized: true },
+};
+export default nextConfig;

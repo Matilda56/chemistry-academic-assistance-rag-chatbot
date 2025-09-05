@@ -1,0 +1,29 @@
+model:
+  base_model: "./models/llama-3.1-8b-instruct"
+  lora_path: "matilda1415926/chemistry-lora-8b"
+
+retrieval:
+  store_path: "./vector_store/chroma_v2"
+  collection_name: "chemistry"
+  dense_model: "sentence-transformers/all-mpnet-base-v2"
+  top_k: 6
+  snippet_max: 480
+  weights:
+    bm25: 0.7
+    dense: 0.3
+  keywords: ["chem", "handbook", "timetable", "lyreco"]
+  regex_keywords: ["\\bchem\\d{3,4}\\b", "\\bg\\d{1}t\\d{3}\\b"]
+  boosts:
+    bm25_kw: 0.20
+    dense_kw: 0.05
+
+generation:
+  max_new_tokens: 400
+  temperature: 0.2
+  top_p: 0.9
+  repetition_penalty: 1.15
+  no_repeat_ngram_size: 4
+
+evidence:
+  max_n: 3
+  use_snippet: false

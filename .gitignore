@@ -1,0 +1,19 @@
+venv/
+models/
+checkpoints/
+vector_store/
+data/
+__pycache__/
+*.pyc
+ui/node_modules/
+ui/.next/
+dist/
+build/
+.env
+.DS_Store
+Thumbs.db
+_old_freeze.txt
+
+# notebooks
+*.ipynb
+.ipynb_checkpoints/
