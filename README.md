@@ -24,7 +24,6 @@ It combines **BM25 + dense retrieval** with a **LoRA adapter** on **LLaMA-3.1-8B
 
 ## 🎥 Demo Video
 
-> Replace the link below with your real video URL (YouTube/Drive/MP4).
 
 **▶️ [Watch the demo](https://.com "Open demo video")**
 
