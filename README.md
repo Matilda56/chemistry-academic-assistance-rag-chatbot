@@ -114,4 +114,28 @@ EMBED_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 > If your current code still uses absolute paths like /workspace/...,
 > either create symlinks to those names or change them to the relative paths above.
 
+## ▶️ Run (Backend + Frontend)
+> Prereqs
+> - Dependencies installed from requirements.lock
+> - Base model & LoRA configured in code (see “Models & Weights” / “Minimal Configuration”)
+> - Virtual env is activated (source venv/bin/activate)
+> - Optional: huggingface-cli login if you load from HF Hub at runtime
+
+1. Start the backend (FastAPI)
+Run the FastAPI app defined in src/rag_pipeline.py:
+```
+# from the repository root
+uvicorn src.rag_pipeline:app --host 0.0.0.0 --port 8000 --reload
+```
+**Quick checks**
+```
+# Health
+curl http://localhost:8000/api/health
+
+# Ask a question
+curl -X POST http://localhost:8000/api/ask \
+     -H "instruction": "How many hours of preparation and reading are expected for the Computational Chemistry?" \
+     -d '{"output":" "}'
+```
+
 
