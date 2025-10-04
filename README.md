@@ -10,6 +10,8 @@ It combines **BM25 + dense retrieval** with a **LoRA adapter** on **LLaMA-3.1-8B
 ![RAG](https://img.shields.io/badge/RAG-BM25%20%2B%20Dense-purple)
 
 ---
+<img width="813" height="512" alt="main_page" src="https://github.com/user-attachments/assets/88742a14-2d22-4309-b7b7-f69facba5752" />
+
 
 ## ✨ Highlights
 
@@ -163,3 +165,59 @@ npm install
 npm run dev
 ```
 The app will be available at http://localhost:3000/chat
+
+
+## 💬 User Guide
+
+### 🏠 Main Page
+
+1.Click “Student Login” to enter the chatbot interface.
+
+2.Click “Admin Login” to access the admin file management system (requires credentials).
+
+<img width="813" height="512" alt="main_page" src="https://github.com/user-attachments/assets/eb718be8-bf5e-42c3-9721-00d14c9dc327" />
+
+### 👩‍🎓 Student Chat Interface
+
+1.After clicking Student Login, you’ll be redirected to the chat interface.
+
+2.Type your chemistry question in the input box at the bottom.
+
+3.When the arrow icon turns colored, press Enter to send your question.
+
+4.Wait a few seconds for a response — ⏳ the first startup may take longer due to model initialization.
+
+5.Click “Back to Home” at the top right to return to the main page.
+
+<img width="988" height="702" alt="chat_page" src="https://github.com/user-attachments/assets/c4e1e2bd-4972-4987-bb48-7616a20611c8" />
+
+
+### 👨‍💼 Admin Login
+
+1.Click Admin Login on the home page.
+
+2.Enter credentials to log in:
+  >Username: 1234
+>
+  >Password: 4321
+
+3.Click Login to access the file upload dashboard.
+
+<img width="939" height="656" alt="login_page" src="https://github.com/user-attachments/assets/50783534-96bd-4cec-a69f-b47c42646cc9" />
+
+
+### 📁 File Upload & Management
+
+1.Once logged in as admin, you’ll see the upload panel.
+
+2.Drag and drop or click to upload course files.
+
+<img width="951" height="577" alt="upload_page" src="https://github.com/user-attachments/assets/31d9c699-0295-4f6b-a48a-fbfc56e6fccf" />
+
+### ✅ Notes
+
+>Make sure the backend server (FastAPI) is running before launching the frontend.
+>
+>The first message may take longer because the model and retriever are initializing.
+>
+>You can return to the homepage anytime via Back to Home.
