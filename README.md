@@ -121,21 +121,48 @@ EMBED_MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
 > - Virtual env is activated (source venv/bin/activate)
 > - Optional: huggingface-cli login if you load from HF Hub at runtime
 
-1. Start the backend (FastAPI)
+**1. Start the backend (FastAPI)**
 Run the FastAPI app defined in src/rag_pipeline.py:
 ```
 # from the repository root
 uvicorn src.rag_pipeline:app --host 0.0.0.0 --port 8000 --reload
 ```
-**Quick checks**
+>✨Quick checks
+>```
+># Health
+>curl http://localhost:8000/api/health
+>```
+
+>```
+># Ask
+> curl -X POST http://localhost:8000/api/ask \
+>  -H "Content-Type: application/json" \
+>  -d '{"instruction":"How many hours of preparation and reading are expected for the Computational Chemistry?"}'
+>```
+
+
+**2. Frontend setup**
+
+> Before running the frontend, you need to configure the backend URL.
+Copy the example environment file:
 ```
-# Health
-curl http://localhost:8000/api/health
-
-# Ask a question
-curl -X POST http://localhost:8000/api/ask \
-     -H "instruction": "How many hours of preparation and reading are expected for the Computational Chemistry?" \
-     -d '{"output":" "}'
+cd ui
+cp .env.example .env.local
 ```
 
+Edit .env.local to match your setup:
+```
+BACKEND_URL=http://127.0.0.1:8000     # local backend
+NEXT_PUBLIC_BASE_PATH=                # leave empty
+```
+> 💡If you’re running with Docker Compose, set:
+> ```
+> BACKEND_URL=http://backend:8000
+> ```
 
+Run:
+```
+npm install
+npm run dev
+```
+The app will be available at http://localhost:3000/chat
