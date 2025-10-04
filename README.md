@@ -24,15 +24,7 @@ It combines **BM25 + dense retrieval** with a **LoRA adapter** on **LLaMA-3.1-8B
 
 ## 🎥 Demo Video
 
-
-
-<p align="center">
-  <video src="./ccb%20demo.mp4" controls width="800">
-    Your browser does not support the video tag.
-  </video>
-</p>
-
----
+▶️ [Watch the demo video here](https://github.com/Matilda56/chemistry-academic-assistance-rag-chatbot/raw/refs/heads/main/ccb%20demo.mp4)
 
 ## 🗂 Project Layout
 
