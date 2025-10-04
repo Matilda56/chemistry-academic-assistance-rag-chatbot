@@ -25,7 +25,12 @@ It combines **BM25 + dense retrieval** with a **LoRA adapter** on **LLaMA-3.1-8B
 ## 🎥 Demo Video
 
 
-<video src="./ccb%20demo.mp4" controls width="800"></video>
+
+<p align="center">
+  <video src="./ccb%20demo.mp4" controls width="800">
+    Your browser does not support the video tag.
+  </video>
+</p>
 
 ---
 
