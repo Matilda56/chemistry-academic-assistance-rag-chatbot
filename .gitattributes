@@ -1,1 +1,5 @@
 ui/** linguist-vendored
+
+ui/app/chat/** linguist-vendored=false
+ui/app/api/chat/** linguist-vendored=false
+ui/app/lib/** linguist-vendored=false
